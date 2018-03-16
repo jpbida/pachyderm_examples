@@ -1,0 +1,47 @@
+{  
+    "pipeline": {
+    "name": "merge-columns"
+  },
+  "transform": {
+    "image": "mission201/alpine-pachy-r",
+    "cmd": [ "/bin/sh" ],
+    "stdin": [
+      "R --no-save < /scripts/src/sym-merge-data.R"
+    ]
+  },
+  "parallelism_spec": {
+    "constant":1
+  },
+  "input": {
+     "union": [
+     {
+     "atom": {
+        "repo": "column1",
+        "glob": "/*",
+        "lazy": true
+      }
+     },
+     {
+     "atom": {
+        "repo": "column2",
+        "glob": "/*",
+        "lazy": true
+      }
+     },
+     {
+     "atom": {
+        "repo": "column3",
+        "glob": "/*",
+        "lazy": true
+      }
+     },
+     {
+     "atom": {
+        "repo": "column4",
+        "glob": "/*",
+        "lazy": true
+      }
+     }
+    ] 
+  }
+}

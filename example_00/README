@@ -1,0 +1,14 @@
+Pipleine takes a data set in JSON format and splits and merges
+the data. 
+
+Split Columns, Merge Columns, Split Columns, Merge Columns
+
+
+      |---- 0 ---|        |---- 0 ---| 
+      |---- 0 ---|        |---- 0 ---|
+ 0 ---|          |-- 0 ---|          | 
+      |---- 0 ---|        |---- 0 ---|
+      |---- 0 ---|        |---- 0 ---|
+
+
+

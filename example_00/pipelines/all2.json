@@ -1,0 +1,104 @@
+{  
+    "pipeline": {
+    "name": "column1b"
+  },
+  "transform": {
+    "image": "mission201/alpine-pachy-r:5",
+    "cmd": [ "/bin/sh" ],
+    "stdin": [
+      "export toolkit_path='/toolkit'",
+      "export input_path='/pfs/datasetb/'",
+      "export output_path='/pfs/out/'",
+      "export script_path='/scripts/src/'",
+      "export column=2",
+      "R --no-save < /scripts/src/get_column.R"
+    ]
+  },
+  "parallelism_spec": {
+       "constant":1
+  },
+  "input": {
+     "atom": {
+        "repo": "datasetb",
+        "glob": "/*"
+      } 
+  }
+}
+{  
+    "pipeline": {
+    "name": "column2b"
+  },
+  "transform": {
+    "image": "mission201/alpine-pachy-r:5",
+    "cmd": [ "/bin/sh" ],
+    "stdin": [
+      "export toolkit_path='/toolkit'",
+      "export input_path='/pfs/datasetb/'",
+      "export output_path='/pfs/out/'",
+      "export script_path='/scripts/src/'",
+      "export column=3",
+      "R --no-save < /scripts/src/get_column.R"
+    ]
+  },
+  "parallelism_spec": {
+       "constant":1
+  },
+  "input": {
+     "atom": {
+        "repo": "datasetb",
+        "glob": "/*"
+      } 
+  }
+}
+{  
+    "pipeline": {
+    "name": "column3b"
+  },
+  "transform": {
+    "image": "mission201/alpine-pachy-r:5",
+    "cmd": [ "/bin/sh" ],
+    "stdin": [
+      "export toolkit_path='/toolkit'",
+      "export input_path='/pfs/datasetb/'",
+      "export output_path='/pfs/out/'",
+      "export script_path='/scripts/src/'",
+      "export column=4",
+      "R --no-save < /scripts/src/get_column.R"
+    ]
+  },
+  "parallelism_spec": {
+       "constant":1
+  },
+  "input": {
+     "atom": {
+        "repo": "datasetb",
+        "glob": "/*"
+      } 
+  }
+}
+{  
+    "pipeline": {
+    "name": "column4b"
+  },
+  "transform": {
+    "image": "mission201/alpine-pachy-r:5",
+    "cmd": [ "/bin/sh" ],
+    "stdin": [
+      "export toolkit_path='/toolkit'",
+      "export input_path='/pfs/datasetb/'",
+      "export output_path='/pfs/out/'",
+      "export script_path='/scripts/src/'",
+      "export column=5",
+      "R --no-save < /scripts/src/get_column.R"
+    ]
+  },
+  "parallelism_spec": {
+       "constant":1
+  },
+  "input": {
+     "atom": {
+        "repo": "datasetb",
+        "glob": "/*"
+      } 
+  }
+}
